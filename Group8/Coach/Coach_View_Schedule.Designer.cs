@@ -155,7 +155,6 @@
             this.Controls.Add(this.btnMenu);
             this.Name = "frmViewSchedule";
             this.Text = "View Schedule";
-            this.Load += new System.EventHandler(this.frmViewSchedule_Load);
             this.gbMonth.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

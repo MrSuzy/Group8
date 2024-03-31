@@ -52,10 +52,5 @@ namespace Group8
             coachSchedule.Show();
             this.Close();
         }
-
-        private void frmViewSchedule_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
