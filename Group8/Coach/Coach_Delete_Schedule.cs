@@ -84,10 +84,5 @@ namespace Group8
             coachSchedule.Show();
             this.Close();
         }
-
-        private void frmScheduleDelete_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

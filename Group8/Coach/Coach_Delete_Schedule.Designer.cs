@@ -257,7 +257,6 @@
             this.Controls.Add(this.btnMenu);
             this.Name = "frmScheduleDelete";
             this.Text = "Coach_Delete_Schedule";
-            this.Load += new System.EventHandler(this.frmScheduleDelete_Load);
             this.gbDelete.ResumeLayout(false);
             this.gbDelete.PerformLayout();
             this.ResumeLayout(false);
