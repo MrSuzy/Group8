@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65E0F4AF-C596-4054-BDCE-4F99C2900FD0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Group8</RootNamespace>
+    <AssemblyName>Group8</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="All Competition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="All Competition.Designer.cs">
+      <DependentUpon>All Competition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs" />
+    <Compile Include="CompetitionDataSet.cs">
+      <DependentUpon>CompetitionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CompetitionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompetitionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnrollPaymentForm.Designer.cs">
+      <DependentUpon>EnrollPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eSports_ClubDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eSports_ClubDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Member%27s Main Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member%27s Main Page.Designer.cs">
+      <DependentUpon>Member%27s Main Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Performance Record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Performance Record.Designer.cs">
+      <DependentUpon>Performance Record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Suggestion to Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suggestion to Admin.Designer.cs">
+      <DependentUpon>Suggestion to Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training Schedule.Designer.cs">
+      <DependentUpon>Training Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unenroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unenroll.Designer.cs">
+      <DependentUpon>Unenroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Profile.Designer.cs">
+      <DependentUpon>Update Profile.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="All Competition.resx">
+      <DependentUpon>All Competition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollPaymentForm.resx">
+      <DependentUpon>EnrollPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member%27s Main Page.resx">
+      <DependentUpon>Member%27s Main Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Performance Record.resx">
+      <DependentUpon>Performance Record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Suggestion to Admin.resx">
+      <DependentUpon>Suggestion to Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training Schedule.resx">
+      <DependentUpon>Training Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unenroll.resx">
+      <DependentUpon>Unenroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Profile.resx">
+      <DependentUpon>Update Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CompetitionDataSet.xsc">
+      <DependentUpon>CompetitionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CompetitionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompetitionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CompetitionDataSet.xss">
+      <DependentUpon>CompetitionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="eSports_ClubDataSet.xsc">
+      <DependentUpon>eSports_ClubDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="eSports_ClubDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>eSports_ClubDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eSports_ClubDataSet.xss">
+      <DependentUpon>eSports_ClubDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="eSports_Club.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="eSports_Club_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>eSports_Club.mdf</DependentUpon>
+    </Content>
+    <Content Include="student picture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

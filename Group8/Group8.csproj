@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF308071-517E-4C61-A09B-5B8D12D2A10C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Group8</RootNamespace>
+    <AssemblyName>Group8</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin_info.cs" />
+    <Compile Include="Admin\CompetitionSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CompetitionSummary.Designer.cs">
+      <DependentUpon>CompetitionSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\EditUser.Designer.cs">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MonthlyIncomeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MonthlyIncomeReport.Designer.cs">
+      <DependentUpon>MonthlyIncomeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ProfileUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ProfileUpdate.Designer.cs">
+      <DependentUpon>ProfileUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\User_Management.Designer.cs">
+      <DependentUpon>User_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\Coach.cs" />
+    <Compile Include="Coach\Coach_Delete_Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\Coach_Delete_Schedule.Designer.cs">
+      <DependentUpon>Coach_Delete_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\Coach_Edit_Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\Coach_Edit_Schedule.Designer.cs">
+      <DependentUpon>Coach_Edit_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\Coach_Member_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\Coach_Member_Payment.Designer.cs">
+      <DependentUpon>Coach_Member_Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\Coach_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\Coach_Menu.Designer.cs">
+      <DependentUpon>Coach_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\Coach_New_Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\Coach_New_Schedule.Designer.cs">
+      <DependentUpon>Coach_New_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\Coach_Player_Performance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\Coach_Player_Performance.Designer.cs">
+      <DependentUpon>Coach_Player_Performance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\Coach_Recommendation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\Coach_Recommendation.Designer.cs">
+      <DependentUpon>Coach_Recommendation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\Coach_Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\Coach_Schedule.Designer.cs">
+      <DependentUpon>Coach_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\Coach_Update_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\Coach_Update_Profile.Designer.cs">
+      <DependentUpon>Coach_Update_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\Coach_View_Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\Coach_View_Schedule.Designer.cs">
+      <DependentUpon>Coach_View_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager.cs" />
+    <Compile Include="Manager\Manager_AddComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager_AddComp.Designer.cs">
+      <DependentUpon>Manager_AddComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager_AssignStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager_AssignStudent.Designer.cs">
+      <DependentUpon>Manager_AssignStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager_CompResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager_CompResult.Designer.cs">
+      <DependentUpon>Manager_CompResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager_EditCompSche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager_EditCompSche.Designer.cs">
+      <DependentUpon>Manager_EditCompSche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager_MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager_MainMenu.Designer.cs">
+      <DependentUpon>Manager_MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager_StudList_Comp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager_StudList_Comp.Designer.cs">
+      <DependentUpon>Manager_StudList_Comp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager_StuList_Recom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager_StuList_Recom.Designer.cs">
+      <DependentUpon>Manager_StuList_Recom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager_UpdateProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager_UpdateProfile.Designer.cs">
+      <DependentUpon>Manager_UpdateProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager_ViewCompSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager_ViewCompSchedule.Designer.cs">
+      <DependentUpon>Manager_ViewCompSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\All Competition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\All Competition.Designer.cs">
+      <DependentUpon>All Competition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\CompetitionDataSet.cs">
+      <DependentUpon>CompetitionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Member\CompetitionDataSet.Designer.cs">
+      <DependentUpon>CompetitionDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\CompetitionDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompetitionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Member\EnrollPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\EnrollPaymentForm.Designer.cs">
+      <DependentUpon>EnrollPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\eSports_ClubDataSet.Designer.cs" />
+    <Compile Include="Member\eSports_ClubDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eSports_ClubDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Member_s Main Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\Member_s Main Page.Designer.cs">
+      <DependentUpon>Member_s Main Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\ModelDataSet.cs" />
+    <Compile Include="Member\Performance Record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\Performance Record.Designer.cs">
+      <DependentUpon>Performance Record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Suggestion to Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\Suggestion to Admin.Designer.cs">
+      <DependentUpon>Suggestion to Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Training Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\Training Schedule.Designer.cs">
+      <DependentUpon>Training Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Unenroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\Unenroll.Designer.cs">
+      <DependentUpon>Unenroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Upcoming_CompetitionsTableAdapter.cs" />
+    <Compile Include="Member\Update Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\Update Profile.Designer.cs">
+      <DependentUpon>Update Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Login\user_login.cs" />
+    <EmbeddedResource Include="Admin\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CompetitionSummary.resx">
+      <DependentUpon>CompetitionSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\EditUser.resx">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MonthlyIncomeReport.resx">
+      <DependentUpon>MonthlyIncomeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ProfileUpdate.resx">
+      <DependentUpon>ProfileUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\User_Management.resx">
+      <DependentUpon>User_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\Coach_Delete_Schedule.resx">
+      <DependentUpon>Coach_Delete_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\Coach_Edit_Schedule.resx">
+      <DependentUpon>Coach_Edit_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\Coach_Member_Payment.resx">
+      <DependentUpon>Coach_Member_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\Coach_Menu.resx">
+      <DependentUpon>Coach_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\Coach_New_Schedule.resx">
+      <DependentUpon>Coach_New_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\Coach_Player_Performance.resx">
+      <DependentUpon>Coach_Player_Performance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\Coach_Recommendation.resx">
+      <DependentUpon>Coach_Recommendation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\Coach_Schedule.resx">
+      <DependentUpon>Coach_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\Coach_Update_Profile.resx">
+      <DependentUpon>Coach_Update_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\Coach_View_Schedule.resx">
+      <DependentUpon>Coach_View_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Manager_AddComp.resx">
+      <DependentUpon>Manager_AddComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Manager_AssignStudent.resx">
+      <DependentUpon>Manager_AssignStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Manager_CompResult.resx">
+      <DependentUpon>Manager_CompResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Manager_EditCompSche.resx">
+      <DependentUpon>Manager_EditCompSche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Manager_MainMenu.resx">
+      <DependentUpon>Manager_MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Manager_StudList_Comp.resx">
+      <DependentUpon>Manager_StudList_Comp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Manager_StuList_Recom.resx">
+      <DependentUpon>Manager_StuList_Recom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Manager_UpdateProfile.resx">
+      <DependentUpon>Manager_UpdateProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Manager_ViewCompSchedule.resx">
+      <DependentUpon>Manager_ViewCompSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\All Competition.resx">
+      <DependentUpon>All Competition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\EnrollPaymentForm.resx">
+      <DependentUpon>EnrollPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\Group8.All_Competition.resources" />
+    <EmbeddedResource Include="Member\Group8.EnrollAndPayment.resources" />
+    <EmbeddedResource Include="Member\Group8.Form1.resources" />
+    <EmbeddedResource Include="Member\Group8.Performance_Record.resources" />
+    <EmbeddedResource Include="Member\Group8.Properties.Resources.resources" />
+    <EmbeddedResource Include="Member\Group8.Suggestion_to_Admin.resources" />
+    <EmbeddedResource Include="Member\Group8.Training_Schedule.resources" />
+    <EmbeddedResource Include="Member\Group8.Unenroll.resources" />
+    <EmbeddedResource Include="Member\Group8.Update_Profile.resources" />
+    <EmbeddedResource Include="Member\Member_s Main Page.resx">
+      <DependentUpon>Member_s Main Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\Performance Record.resx">
+      <DependentUpon>Performance Record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\Resources.resx" />
+    <EmbeddedResource Include="Member\Suggestion to Admin.resx">
+      <DependentUpon>Suggestion to Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\Training Schedule.resx">
+      <DependentUpon>Training Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\Unenroll.resx">
+      <DependentUpon>Unenroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\Update Profile.resx">
+      <DependentUpon>Update Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Member\CompetitionDataSet.xsc">
+      <DependentUpon>CompetitionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Member\CompetitionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompetitionDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Member\CompetitionDataSet.xss">
+      <DependentUpon>CompetitionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Member\eSports_ClubDataSet.xsc">
+      <DependentUpon>eSports_ClubDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Member\eSports_ClubDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>eSports_ClubDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Member\eSports_ClubDataSet.xss">
+      <DependentUpon>eSports_ClubDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Member\Group8.csproj" />
+    <None Include="Member\Group8.csproj.AssemblyReference.cache" />
+    <None Include="Member\Group8.csproj.CoreCompileInputs.cache" />
+    <None Include="Member\Group8.csproj.dtbcache.json" />
+    <None Include="Member\Group8.csproj.GenerateResource.cache" />
+    <None Include="Member\Group8.exe.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="eSports_Club.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="eSports_Club_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>eSports_Club.mdf</DependentUpon>
+    </Content>
+    <Content Include="Member\CompetitionDataSet.Designer.cs.dll" />
+    <Content Include="Member\eSports_ClubDataSet.Designer.cs.dll" />
+    <Content Include="Member\Group8.csproj.FileListAbsolute.txt" />
+    <Content Include="Member\Group8.csproj.user" />
+    <Content Include="Member\Group8.pdb" />
+    <Content Include="Member\ModelDataSet.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+</Project>
